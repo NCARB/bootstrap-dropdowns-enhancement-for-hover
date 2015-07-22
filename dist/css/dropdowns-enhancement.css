@@ -22,7 +22,7 @@
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #428bca;
+  background-color: #337ab7;
 }
 .dropdown-menu > li > input[disabled] ~ label,
 .dropdown-menu > li > input[disabled] ~ label:hover,
@@ -30,7 +30,7 @@
 .dropdown-menu > .disabled > label,
 .dropdown-menu > .disabled > label:hover,
 .dropdown-menu > .disabled > label:focus {
-  color: #999999;
+  color: #777777;
 }
 .dropdown-menu > li > input[disabled] ~ label:hover,
 .dropdown-menu > li > input[disabled] ~ label:focus,
@@ -211,6 +211,10 @@
 }
 .dropdown-menu.bullet.pull-middle.pull-center:after {
   border: none;
+  display: none;
+}
+.navbar-collapse.collapse .dropdown-menu.bullet:before,
+.navbar-collapse.collapse .dropdown-menu.bullet:after {
   display: none;
 }
 .dropdown-submenu {
