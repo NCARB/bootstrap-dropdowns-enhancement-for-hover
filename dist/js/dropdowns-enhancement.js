@@ -20,11 +20,11 @@
         opened;
 
 
-    function Dropdown(element) {
+    function DropdownForHover(element) {
         $(element).on('click' + eventNamespace, this.toggle)
     }
 
-    var proto = Dropdown.prototype;
+    var proto = DropdownForHover.prototype;
 
     proto.toggle = function(event) {
         var $element = event.type == "show" ? $(event.target) : $(this);
@@ -221,19 +221,19 @@
 
     var old = $.fn.dropdown;
 
-    $.fn.dropdown = function(option) {
+    $.fn.dropdownForHover = function(option) {
         return this.each(function() {
             var $this = $(this);
             var data = $this.data('bs.dropdown');
 
-            if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)));
+            if (!data) $this.data('bs.dropdown', (data = new DropdownForHover(this)));
             if (typeof option == 'string') data[option].call($this);
         })
     };
 
-    $.fn.dropdown.Constructor = Dropdown;
+    $.fn.dropdownForHover.Constructor = DropdownForHover;
 
-    $.fn.dropdown.clearMenus = function(e) {
+    $.fn.dropdownForHover.clearMenus = function(e) {
         $(backdrop).remove();
         $('.' + openClass + ' ' + toggle).each(function() {
             var $parent = getParent($(this));
@@ -252,7 +252,7 @@
     // DROPDOWN NO CONFLICT
     // ====================
 
-    $.fn.dropdown.noConflict = function() {
+    $.fn.dropdownForHover.noConflict = function() {
         $.fn.dropdown = old;
         return this
     };
