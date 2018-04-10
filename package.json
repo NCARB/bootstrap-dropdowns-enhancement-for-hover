@@ -1,6 +1,6 @@
 {
-    "name": "bootstrap_dropdowns_enhancement",
-    "version": "3.1.1",
+    "name": "bootstrap-dropdowns-enhancement-for-hover",
+    "version": "4.1.0",
     "description": "Bootstrap Dropdown Menus Enhancement (Enhancing functionality of dropdown menus)",
     "dependencies": {},
     "devDependencies": {
